@@ -34,6 +34,6 @@ public class ExceptionAdvice {
         LOGGER.error(e.getMessage());
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-            .body(new ExceptionResponse(e.getMessage()));
+            .body(new ExceptionResponse("INTERNAL_SERVER_ERROR"));
     }
 }
