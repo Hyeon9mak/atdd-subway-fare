@@ -25,7 +25,10 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew clean build
-    - name: Kill old version spring process
-      run: kill -9 pidof java
-    - name: Deploy
-      run: nohup java -jar -Dspring.profiles.active=prod ./build/libs/atdd-subway-fare-0.0.1-SNAPSHOT.jar 1> ./logs/error.log 2>&1 &
+    - name: SSH connection
+      run: ssh was
+    - name: Test file create
+      run: touch TEST_SUCCESS_FILE
+    - name: exit was ssh connection
+      run: exit
+#     run: nohup java -jar -Dspring.profiles.active=prod ./build/libs/atdd-subway-fare-0.0.1-SNAPSHOT.jar 1> ./logs/error.log 2>&1 &
