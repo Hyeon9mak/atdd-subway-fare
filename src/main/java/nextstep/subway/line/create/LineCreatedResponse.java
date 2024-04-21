@@ -7,10 +7,13 @@ import java.util.stream.Collectors;
 
 public class LineCreatedResponse {
 
-    private final Long id;
-    private final String name;
-    private final String color;
-    private final List<LineCreatedStationResponse> stations;
+    private Long id;
+    private String name;
+    private String color;
+    private List<LineCreatedStationResponse> stations;
+
+    public LineCreatedResponse() {
+    }
 
     public LineCreatedResponse(Long id, String name, String color, List<LineCreatedStationResponse> stations) {
         this.id = id;

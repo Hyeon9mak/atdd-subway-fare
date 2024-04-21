@@ -7,8 +7,11 @@ import java.util.stream.Collectors;
 
 public class PathFoundStationResponse {
 
-    private final Long id;
-    private final String name;
+    private Long id;
+    private String name;
+
+    public PathFoundStationResponse() {
+    }
 
     public PathFoundStationResponse(Long id, String name) {
         this.id = id;

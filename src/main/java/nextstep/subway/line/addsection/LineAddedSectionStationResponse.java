@@ -2,8 +2,11 @@ package nextstep.subway.line.addsection;
 
 public class LineAddedSectionStationResponse {
 
-    private final Long id;
-    private final String name;
+    private Long id;
+    private String name;
+
+    public LineAddedSectionStationResponse() {
+    }
 
     public LineAddedSectionStationResponse(Long id, String name) {
         this.id = id;

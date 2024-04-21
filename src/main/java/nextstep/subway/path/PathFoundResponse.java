@@ -6,8 +6,11 @@ import java.util.List;
 
 public class PathFoundResponse {
 
-    private final List<PathFoundStationResponse> stations;
-    private final int distance;
+    private List<PathFoundStationResponse> stations;
+    private int distance;
+
+    public PathFoundResponse() {
+    }
 
     public PathFoundResponse(List<PathFoundStationResponse> stations, int distance) {
         this.stations = stations;

@@ -4,8 +4,11 @@ import nextstep.subway.station.Station;
 
 public class LineCreatedStationResponse {
 
-    private final Long id;
-    private final String name;
+    private Long id;
+    private String name;
+
+    public LineCreatedStationResponse() {
+    }
 
     public LineCreatedStationResponse(Long id, String name) {
         this.id = id;
