@@ -1,40 +1,47 @@
 plugins {
-	id 'org.springframework.boot' version '2.4.3'
+	id 'org.springframework.boot' version '2.7.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
-group = 'com.example'
+group = 'nextstep'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '1.8'
+sourceCompatibility = '11'
 
 repositories {
 	mavenCentral()
 }
 
-dependencies {
 
+dependencies {
 	// spring
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-	// handlebars
-	implementation 'pl.allegro.tech.boot:handlebars-spring-boot-starter:0.3.0'
 
 	// log
 	implementation 'net.rakugakibox.spring.boot:logback-access-spring-boot-starter:2.7.1'
 
-	testImplementation 'io.rest-assured:rest-assured:3.3.0'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-	runtimeOnly 'com.h2database:h2'
-
-	// jgrapht
-    implementation 'org.jgrapht:jgrapht-core:1.0.1'
+	// jgraph
+	implementation 'org.jgrapht:jgrapht-core:1.0.1'
 
 	// jwt
 	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+
+	// test
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.rest-assured:rest-assured:4.5.1'
+
+	// cucumber
+	testImplementation("io.cucumber:cucumber-java:7.14.0")
+	testImplementation("io.cucumber:cucumber-java8:7.14.0")
+	testImplementation("io.cucumber:cucumber-spring:7.14.0")
+	testImplementation("io.cucumber:cucumber-junit-platform-engine:7.14.0")
+	testImplementation("org.junit.platform:junit-platform-suite:1.10.0")
+	testImplementation("org.junit.platform:junit-platform-suite-api:1.10.0")
+	testImplementation("org.junit.platform:junit-platform-commons:1.10.0")
+	testImplementation("org.junit.platform:junit-platform-engine:1.10.0")
+
+	runtimeOnly 'com.h2database:h2'
 }
 
 test {
