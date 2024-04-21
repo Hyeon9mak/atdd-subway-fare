@@ -1,17 +1,31 @@
 spring:
-  datasource:
-    driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-handlebars:
-  suffix: .html
-  enabled: true
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
 security:
   jwt:
     token:
-      secret-key: my_secret_is_secret
+      secret-key: atdd-secret-key
       expire-length: 3600000
+
+github:
+  client:
+    base-url: https://github.com
+    id: client-id
+    secret: client-secret
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: test
+
+github:
+  client:
+    base-url: http://localhost:8080
+    id: client-id
+    secret: client-secret
